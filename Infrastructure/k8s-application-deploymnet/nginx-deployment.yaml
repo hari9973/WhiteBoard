@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-static-files-server
+spec:
+  selector:
+    matchLabels:
+      deployment: nginx-static-files-server
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        deployment: nginx-static-files-server
+    spec:
+      containers:
+        - image: ghostrider9972/static-content-server:latest
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "200m"
+          imagePullPolicy: "Always"
+          name: nginx-static-files-server
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-static-files-server-lb
+  labels:
+    run: nginx-static-files-server
+spec:
+  ports:
+    - name: http
+      port: 80
+      protocol: TCP
+      targetPort: 80
+  type: ClusterIP
+  selector:
+    deployment: nginx-static-files-server
