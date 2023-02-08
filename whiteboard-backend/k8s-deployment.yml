@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whiteboard-backend-deployment
+  labels:
+    app: whiteboard-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: whiteboard-backend
+  template:
+    metadata:
+      labels:
+        app: whiteboard-backend
+    spec:
+      containers:
+        - name: whiteboard-backend
+          image: ghostrider9972/whiteboard-server:latest
+          imagePullPolicy: "Always"
+          ports:
+            - containerPort: 9092
+            - containerPort: 5701
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: whiteboard-backend-lb
+  labels:
+    app: whiteboard-backend
+spec:
+  type: ClusterIP
+  sessionAffinity: ClientIP
+  sessionAffinityConfig:
+    clientIP:
+      timeoutSeconds: 10
+  ports:
+    - name: socket-connection
+      port: 9092
+      targetPort: 9092
+      protocol: TCP
+  selector:
+    app: whiteboard-backend

@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.af086ea1.css",
+    "main.js": "/static/js/main.878cd28f.js",
+    "pdf.worker.js": "/e7e915313973ba1d49f9bb2a1998626e.js",
+    "static/media/select.svg": "/static/media/select.ad97be7339018abf84121f0d364cb3de.svg",
+    "static/media/pencil.svg": "/static/media/pencil.eda8d85bd538b8c005a7056b82d799bf.svg",
+    "static/media/delete.svg": "/static/media/delete.f634ca673684c88b5be01d239d04508c.svg",
+    "static/media/remove.svg": "/static/media/remove.30a74efcc63131700c78718d5baa426c.svg",
+    "static/media/eraser.svg": "/static/media/eraser.6834b01029ee1d675f2e50e33b36d1fc.svg",
+    "static/media/text.svg": "/static/media/text.abecf614d81f94be9799afa61fb52de2.svg",
+    "static/media/ellipse.svg": "/static/media/ellipse.a59ed493906bea77e6181de4704edeea.svg",
+    "static/media/rectangle.svg": "/static/media/rectangle.4c451539bdd94daffe9845b338b95aa5.svg",
+    "index.html": "/index.html",
+    "static/media/line.svg": "/static/media/line.8231e0126dbf10eff51eabeaec9081cc.svg",
+    "static/media/triangle.svg": "/static/media/triangle.58a0a70e9ca69ed2ef79d4e13d65bffb.svg",
+    "main.af086ea1.css.map": "/static/css/main.af086ea1.css.map",
+    "main.878cd28f.js.map": "/static/js/main.878cd28f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af086ea1.css",
+    "static/js/main.878cd28f.js"
+  ]
+}
