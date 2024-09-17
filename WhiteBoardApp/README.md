@@ -1,6 +1,4 @@
-# react-fabricjs-whiteboard ( 👷‍♀️ 🔨)
-
-React whiteboard component based on [Fabric.js](http://fabricjs.com/) and [React-PDF](https://github.com/wojtekmaj/react-pdf#readme).
+# react-fabricjs-whiteboard
 
 Demo page: https://vigorous-heisenberg-7f8730.netlify.app/
 
